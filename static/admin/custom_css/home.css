@@ -1,0 +1,15 @@
+.custom_card_panel {
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.source_panel {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+}

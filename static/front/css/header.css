@@ -1,0 +1,75 @@
+.wrapper {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wrapper img {
+    object-fit: cover;
+    width: 143px;
+}
+
+.wrapper:hover {
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%) !important;
+}
+
+.wrapper:hover {
+    #logo-view {
+        content: url("../imgs/logo-dark.png");
+    }
+}
+
+.wrapper:hover .nav-link,
+.wrapper:hover .contact-us {
+    color: #000 !important;
+}
+
+.wrapper:hover .contact-us .phone-num {
+    color: #005BAC !important;
+}
+
+.wrapper .contact-us ._phone-icon {
+    fill: #fff;
+    width: 36px;
+    vertical-align: middle;
+}
+
+.wrapper:hover ._phone-icon {
+    fill: #444 !important;
+}
+
+.con-text {
+    vertical-align: middle;
+}
+
+.wrapper .contact-us {
+    color: #fff;
+}
+
+.wrapper nav {
+    padding: 16px 0;
+    background-color: transparent;
+}
+
+.wrapper nav ul li {
+    margin-left: 3rem;
+}
+
+.wrapper nav ul li .nav-link {
+    color: #fff;
+}
+
+.contact-us {
+    user-select: none;
+}
+
+.contact-us .phone-num {
+    font-size: 18px;
+    font-weight: bold;
+}

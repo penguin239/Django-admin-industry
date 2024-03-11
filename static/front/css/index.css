@@ -1,0 +1,249 @@
+@font-face {
+    font-family: dingding;
+    src: url('../font/DingTalk-JinBuTi.ttf');
+}
+
+:target {
+    scroll-margin-top: 84px;
+}
+
+hr {
+    margin: .6rem;
+    width: 100%;
+}
+
+.large-screen {
+    position: relative;
+}
+
+.background-video {
+    z-index: 10;
+    position: relative;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.dark-cover {
+    z-index: 15;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .56);
+}
+
+.introduction {
+    user-select: none;
+    z-index: 20;
+    color: #fff;
+    position: absolute;
+    bottom: 7%;
+    left: 4%;
+    line-height: 30px;
+    transition: all .3s ease;
+}
+
+.introduction h1 {
+    font-family: dingding, serif;
+    font-size: 3.85rem;
+    font-weight: lighter;
+}
+
+.introduction h3 {
+    font-size: 1.55rem;
+    margin-top: 16px;
+    font-weight: lighter;
+}
+
+@media (max-width: 1300px) {
+    .introduction h1 {
+        font-size: 3.25rem;
+    }
+
+    .introduction h3 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .introduction h1 {
+        font-size: 2.85rem;
+    }
+
+    .introduction h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .introduction h1 {
+        font-size: 1.65rem;
+    }
+
+    .introduction h3 {
+        font-size: 1rem;
+    }
+}
+
+.next {
+    z-index: 20;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    height: 30px;
+    animation: run_next .8s linear infinite;
+}
+
+@keyframes run_next {
+    25% {
+        bottom: .5%;
+    }
+    50% {
+        bottom: 0;
+    }
+    75% {
+        bottom: .5%;
+    }
+    100% {
+        bottom: 1%;
+    }
+}
+
+.next .next-logo {
+    cursor: pointer;
+    width: 20px;
+    height: 100%;
+    margin: 0 auto;
+    border: 13px solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.product {
+    margin-top: -6px;
+    width: 100%;
+    padding: 30px 10px 10px;
+    background-image: url("../imgs/Background 20.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.product .product-describe {
+    margin: 26px 0;
+}
+
+.product .product-detail {
+    cursor: pointer;
+    position: relative;
+    width: 90%;
+    padding: 10px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 1px solid #ccc;
+    transition: all .3s ease;
+}
+
+.product .row .col-md-3 {
+    padding-bottom: 30px;
+}
+
+.product .product-detail img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.product .product-detail:hover {
+    border: 1px solid rgba(0, 91, 172, .4);
+}
+
+.product .product-detail .product-name {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.application-area {
+    width: 100%;
+    padding: 40px 10px;
+    background-color: #0d6efd;
+}
+
+.application-area .container .col-md-3 {
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    background: #fff;
+}
+
+.application-area .container .col-md-3:first-child {
+    border-left: 0;
+}
+
+.application-area .container .read-more a {
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.application-area .container .col-md-3 img {
+    width: 100%;
+    height: 30vh;
+}
+
+.application-area .container .col-md-3 .app-name {
+    padding: 6px 0;
+    font-size: 18px;
+}
+
+.application-area .container .col-md-3 .app-desc {
+    padding-bottom: 10px;
+}
+
+.about-us {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-image: url("../imgs/wallhaven-8xyk52.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-us .container {
+    margin-top: 6rem;
+}
+
+.about-us .container .line {
+    width: 300px;
+    height: 1px;
+    border: 1px solid #000;
+    margin: 18px 0;
+}
+
+.about-us .container .company-desc {
+    word-break: break-all;
+    line-height: 20px;
+}
+
+.about-us .read-more a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 210px;
+    height: 50px;
+    background-color: rgb(22, 94, 166);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 100px;
+    transition: all .2s ease;
+}
+
+.about-us .read-more a:hover {
+    background-color: rgb(235,153,23);
+}
+
+.news {
+    width: 100%;
+    height: 100vh;
+}
