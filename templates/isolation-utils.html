@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'front/css/isolation-utils.css' %}">
+    {% block children_css %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+    <div class="top-back">
+        <div class="top-back-font container">
+            <p>{{ page_title }}</p>
+            <div class="site-location container">
+                <span><a href="/">首页</a>
+                    > {{ site_location }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="isolation">
+        <div class="isolation_location">
+            <a href="/">首页</a> > {{ site_location }}
+        </div>
+    </div>
+    <div class="container">
+        {% block below_isolation_content %}{% endblock %}
+    </div>
+{% endblock %}

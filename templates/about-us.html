@@ -1,0 +1,15 @@
+{% extends 'isolation-utils.html' %}
+{% load static %}
+
+{% block children_css %}
+    <link rel="stylesheet" href="{% static 'front/css/about-us.css' %}">
+{% endblock %}
+
+{% block below_isolation_content %}
+    <div class="about-content">
+    <div class="about-title">
+        <h1 class="d-inline-block">关于我们</h1>
+        <span>About Us</span>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+.about-content {
+    margin-top: 4rem;
+    padding: 20px;
+    width: 100%;
+}
+
+.about-title h1 {
+    font-weight: bold;
+    font-size: 44px;
+}
+
+.about-title span {
+    margin-left: 6px;
+    color: rgb(153,153,153);
+    font-size: 22px;
+}

@@ -1,0 +1,50 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.top-back {
+    user-select: none;
+    background-image: url("../imgs/bg-about-us.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-top: 0;
+}
+
+.top-back .top-back-font {
+    padding-top: 10%;
+    padding-bottom: 8%;
+}
+
+.top-back .top-back-font p {
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.top-back .top-back-font .site-location {
+    font-size: 14px;
+    color: #fff;
+}
+
+.isolation {
+    user-select: none;
+    width: 100%;
+    padding: 15px;
+    text-align: right;
+    background-color: #EFF1F5;
+}
+
+.isolation .isolation_location {
+    font-size: 14px;
+    padding-right: 5rem;
+}
+
+.isolation .isolation_location a {
+    color: #f2ae01;
+}

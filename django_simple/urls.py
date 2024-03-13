@@ -33,5 +33,9 @@ urlpatterns = [
     path('api/ServerSituation', api.ServerSituation, name='ServerSituation'),
 
     # front
-    path('', front.index, name='index')
+    path('', front.index, name='index'),
+    path('about-us/', front.aboutUs, name='aboutUs'),
+    path('products/', front.products, name='products'),
+    path('news/', front.news, name='news'),
+    path('contact-us/', front.contactUs, name='contact-us')
 ]
