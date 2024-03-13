@@ -133,6 +133,7 @@ hr {
 
 .product .product-describe {
     margin: 26px 0;
+    color: rgb(70, 70, 70);
 }
 
 .product .product-detail {
@@ -203,7 +204,6 @@ hr {
 
 .about-us {
     width: 100%;
-    height: 100vh;
     padding: 10px;
     background-image: url("../imgs/wallhaven-8xyk52.jpg");
     background-size: cover;
@@ -218,12 +218,14 @@ hr {
     width: 300px;
     height: 1px;
     border: 1px solid #000;
-    margin: 18px 0;
+    margin: 18px 0 40px;
 }
 
 .about-us .container .company-desc {
+    width: 50%;
     word-break: break-all;
-    line-height: 20px;
+    color: rgb(70, 70, 70);
+    line-height: 2;
 }
 
 .about-us .read-more a {
@@ -245,5 +247,5 @@ hr {
 
 .news {
     width: 100%;
-    height: 100vh;
+    margin-top: 2rem;
 }

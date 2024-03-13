@@ -1,9 +1,9 @@
-a {
+.top-back a, .isolation a {
     text-decoration: none;
     color: #fff;
 }
 
-a:hover {
+.top-back a:hover, .isolation a:hover {
     text-decoration: underline;
 }
 

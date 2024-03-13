@@ -63,6 +63,57 @@
 <div>
     {% block content %}{% endblock %}
 </div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-flex-box">
+            <ul class="footer-nav d-none d-xl-block">
+                <li class="f1-list">
+                    <a href="/" class="f1-list-a">首页</a>
+                </li>
+                <li class="f1-list">
+                    <a href="/about-us/" class="f1-list-a">关于我们</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                </li>
+                <li class="f1-list">
+                    <a href="/products/" class="f1-list-a">产品首页</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                </li>
+                <li class="f1-list">
+                    <a href="/news/" class="f1-list-a">新闻动态</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                </li>
+                <li class="f1-list">
+                    <a href="/contact-us/" class="f1-list-a">联系我们</a>
+                    <a href="" class="f2-list-a">test111</a>
+                    <a href="" class="f2-list-a">test111</a>
+                </li>
+            </ul>
+            <div class="footer-right">
+                <div class="QR-code">
+                    <img src="{% static 'front/imgs/WX_QR.png' %}" alt="">
+                    <div class="footer-company-name">邢台丰迪机械有限公司</div>
+                </div>
+                <div class="footer-address">
+                    <p>地址：河北省邢台市隆尧县魏家庄镇肖庄后村村北</p>
+                    <p>电话：157-2037-6358</p>
+                    <p>邮箱：309318068@qq.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2020-2024 邢台丰迪机械有限公司
+    </div>
+</footer>
 </body>
 <script src="{% static 'front/js/bootstrap.js' %}"></script>
 <script src="{% static 'front/js/jquery-3.6.4.min.js' %}"></script>
