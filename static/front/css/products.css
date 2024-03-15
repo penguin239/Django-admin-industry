@@ -12,12 +12,12 @@
     width: 100%;
     height: 30vh;
     background-color: #0d6efd;
-    margin-left: 1.5rem;
 }
 
 .product-content .category-list {
     user-select: none;
     flex: 2;
+    margin-right: 1.5rem;
 }
 
 .product-content .category-list-text {
@@ -53,4 +53,22 @@
 
 .product-content .category-list li:last-child {
     border-bottom: none;
+}
+
+.phone-category-list {
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    padding: 20px 15px;
+    margin-top: 1.5rem;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #353843;
+}
+
+@media (max-width: 1200px) {
+    .category-list {
+        display: none;
+    }
+    
 }
