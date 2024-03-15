@@ -52,7 +52,7 @@
                         </div>
                         <div class="con-text d-inline-block ms-1">
                             <span class="small">24小时咨询热线：</span><br>
-                            <span class="phone-num">157-2037-6358</span>
+                            <span class="phone-num">{{ site_settings.phone_number }}</span>
                         </div>
                     </div>
                 </div>
@@ -103,9 +103,9 @@
                     <div class="footer-company-name">邢台丰迪机械有限公司</div>
                 </div>
                 <div class="footer-address">
-                    <p>地址：河北省邢台市隆尧县魏家庄镇肖庄后村村北</p>
-                    <p>电话：157-2037-6358</p>
-                    <p>邮箱：309318068@qq.com</p>
+                    <p>地址：{{ site_settings.company_address }}</p>
+                    <p>电话：{{ site_settings.phone_number }}</p>
+                    <p>邮箱：{{ site_settings.mail }}</p>
                 </div>
             </div>
         </div>

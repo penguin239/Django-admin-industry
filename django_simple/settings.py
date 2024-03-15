@@ -85,6 +85,13 @@ DATABASES = {
     }
 }
 
+REDIS_CONFIG = {
+    'host': '42.193.96.127',
+    'port': 6379,
+    'db': 0,
+    'password': '$FlyPenguin6688'
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -137,9 +144,9 @@ SIMPLEUI_CONFIG = {
     'dynamic': False,
     'menus': [
         {
-            'name': '我的项目',
+            'name': '站点管理',
             'icon': 'fa-solid fa-star',
-            'url': '/admin/test/'
+            'url': '/admin/site-manage/'
         },
         {
             'app': 'industry',

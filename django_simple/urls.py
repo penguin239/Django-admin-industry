@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.conf import settings
 from django.views.static import serve
-from industry import views, front
+from industry import views, front, admin_site
 from industry import api
+from industry.admin_site import custom_admin_site
 
 urlpatterns = [
     # admin
-    path('admin/test/', admin.site.custom_admin_view, name='test'),
+    path('admin/site-manage/', custom_admin_site.site_manage, name='site-manage'),
     path('admin/', admin.site.urls),
 
     # static

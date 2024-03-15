@@ -6,5 +6,48 @@
 {% endblock %}
 
 {% block below_isolation_content %}
-    
+    <div class="product-content">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        机械类别1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>t1</li>
+                            <li>t2</li>
+                            <li>t3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        机械类别2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>t1</li>
+                            <li>t2</li>
+                            <li>t3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-list">
+{#            todo ajax加载商品列表#}
+        </div>
+    </div>
 {% endblock %}
