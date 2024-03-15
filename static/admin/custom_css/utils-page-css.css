@@ -1,0 +1,25 @@
+.top-tips {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ebeef5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#add-category {
+    margin-top: -3px;
+    float: right;
+    font-size: 14px;
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.245rem;
+}
+
+.top-tips .prefix-icon::before {
+    content: url(../img/card-text.svg);
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-right: 3px;
+    vertical-align: middle;
+}

@@ -25,6 +25,7 @@ from industry.admin_site import custom_admin_site
 urlpatterns = [
     # admin
     path('admin/site-manage/', custom_admin_site.site_manage, name='site-manage'),
+    path('admin/category/', custom_admin_site.category, name='category'),
     path('admin/', admin.site.urls),
 
     # static

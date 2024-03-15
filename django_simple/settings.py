@@ -150,6 +150,20 @@ SIMPLEUI_CONFIG = {
         },
         {
             'app': 'industry',
+            'name': '产品管理',
+            'icon': 'fa-solid fa-bars',
+            'models': [
+                {
+                    'name': '产品列表'
+                },
+                {
+                    'name': '产品类别',
+                    'url': 'industry/category/'
+                }
+            ]
+        },
+        {
+            'app': 'industry',
             'name': '数据库管理',
             'icon': 'fa fa-th-list',
             # 'url': 'industry/userinfo', # 直接显示

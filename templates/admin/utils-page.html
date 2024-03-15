@@ -1,0 +1,12 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'admin/custom_css/utils-page-css.css' %}">
+<link rel="stylesheet" href="{% static 'front/css/bootstrap.css' %}">
+{% block css %}{% endblock %}
+
+<div class="iframe-page-cus">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="{% static 'front/js/bootstrap.js' %}"></script>
+{% block js %}{% endblock %}

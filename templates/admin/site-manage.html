@@ -1,9 +1,12 @@
+{% extends 'admin/utils-page.html' %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'front/css/bootstrap.css' %}">
-<link rel="stylesheet" href="{% static 'admin/custom_css/site-manage.css' %}">
-<div class="container">
-    jnknjknjk
-</div>
+{% block css %}
+    <link rel="stylesheet" href="{% static 'admin/custom_css/site-manage.css' %}">
+{% endblock %}
 
-<script src="{% static 'front/js/bootstrap.js' %}"></script>
+{% block content %}
+<div class="site-manage-main">
+    test
+</div>
+{% endblock %}

@@ -11,5 +11,10 @@ class CustomAdminSite(admin.AdminSite):
             request, 'admin/site-manage.html'
         )
 
+    def category(self, request):
+        return TemplateResponse(
+            request, 'admin/category.html'
+        )
+
 
 custom_admin_site = CustomAdminSite()
