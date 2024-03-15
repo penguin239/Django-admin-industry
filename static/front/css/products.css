@@ -46,7 +46,7 @@
     color: #666666;
 }
 
-.product-content .category-list li:hover {
+.product-content .category-list li:hover, .product-content .category-list .hover {
     color: #fff;
     background-color: #4d515a;
 }

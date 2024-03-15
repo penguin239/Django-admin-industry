@@ -32,23 +32,27 @@ def products(request):
 
     keyword = request.GET.get('category', None)
     result_product_list = []
+    category = ''
+
     if keyword:
         category = url_decode(keyword)
         result_product_list = Product.objects.filter(category=category)
     else:
         # 访问默认加载第一个类别
-        category_table = Category.objects.first()
+        category_table = Category.objects.filter(is_active=True).first()
         if category_table:
             result_product_list = Product.objects.filter(category=category_table.category)
+            category = category_table.category
 
     all_categories = Category.objects.filter(is_active=True)
 
     return render(
         request, 'products.html', {
             'page_title': 'Products Center',
-            'site_location': '产品首页',
+            'site_location': f'产品首页 > {category}',
             'all_categories': all_categories,
-            'result_product_list': result_product_list
+            'result_product_list': result_product_list,
+            'label_highlight': category
         }
     )
 
