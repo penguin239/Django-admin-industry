@@ -12,10 +12,14 @@ class UserInfo(models.Model):
 
 
 class Category(models.Model):
-    category = models.CharField(max_length=64, verbose_name='类别')
+    category = models.CharField(max_length=64, verbose_name='类别', unique=True)
     is_active = models.BooleanField(default=True, verbose_name='启用')
+
+    def __str__(self):
+        return self.category
 
 
 class Product(models.Model):
     name = models.CharField(max_length=64, verbose_name='机械名称')
-    category = models.CharField(max_length=64, verbose_name='类别')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='类别')
+    # todo: 为产品详细信息设计表

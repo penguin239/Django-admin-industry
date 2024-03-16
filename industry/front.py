@@ -27,7 +27,7 @@ def aboutUs(request):
     )
 
 
-def products(request):
+def products(request, is_extend=False):
     request.prefix = '产品首页-'
 
     keyword = request.GET.get('category', None)
@@ -36,25 +36,28 @@ def products(request):
 
     if keyword:
         category = url_decode(keyword)
-        result_product_list = Product.objects.filter(category=category)
+        category_id = Category.objects.filter(category=category).first()
+        result_product_list = Product.objects.filter(category_id=category_id.id)
     else:
         # 访问默认加载第一个类别
         category_table = Category.objects.filter(is_active=True).first()
         if category_table:
-            result_product_list = Product.objects.filter(category=category_table.category)
+            result_product_list = Product.objects.filter(category_id=category_table.id)
             category = category_table.category
 
     all_categories = Category.objects.filter(is_active=True)
 
-    return render(
-        request, 'products.html', {
-            'page_title': 'Products Center',
-            'site_location': f'产品首页 > {category}',
-            'all_categories': all_categories,
-            'result_product_list': result_product_list,
-            'label_highlight': category
-        }
-    )
+    context = {
+        'page_title': 'Products Center',
+        'site_location': f'产品首页 > {category}',
+        'all_categories': all_categories,
+        'result_product_list': result_product_list,
+        'label_highlight': category
+    }
+
+    if is_extend:
+        return context
+    return render(request, 'products.html', context)
 
 
 def news(request):
@@ -66,4 +69,21 @@ def news(request):
 def contactUs(request):
     return render(
         request, 'contact-us.html'
+    )
+
+
+def productDetail(request):
+    product_id = request.GET.get('product-id', None)
+    if not product_id:
+        # todo: 重定向到错误页面
+        pass
+    product = Product.objects.filter(id=product_id).first()
+    category = Category.objects.filter(id=product.category_id).first()
+
+    context = products(request, True)
+    context['site_location'] += f' > {product.name}'
+    context['label_highlight'] = category.category
+
+    return render(
+        request, 'product-detail.html', context
     )

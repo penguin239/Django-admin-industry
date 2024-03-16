@@ -6,9 +6,25 @@
 {% endblock %}
 
 {% block below_isolation_content %}
-    <div class="phone-category-list">
+    <div class="phone-category-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-product"
+         aria-controls="offcanvas-product">
         全部分类
-{#    todo: 手机兼容，点击使用bootstrap搞出侧边栏存放所有类别#}
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-product"
+         aria-labelledby="offcanvas-product-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvas-product-label">全部分类</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="offcanvas-category-list">
+                {% for category in all_categories %}
+                    <li class="load-commodity" value="{{ category.category }}">
+                        {{ category.category }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
     <div class="product-content">
         <div class="category-list">
@@ -23,9 +39,15 @@
         </div>
         <div class="product-list" data-high-light="{{ label_highlight }}">
             {% for product in result_product_list %}
-                <p>{{ product.name }} - {{ product.category }}</p>
+                <div class="loop-item">
+                    <a class="product-detail" href="/product-detail?product-id={{ product.id }}">
+                        <img src="" alt="">
+                        <div class="product-name">{{ product.name }}</div>
+                    </a>
+                </div>
             {% endfor %}
         </div>
+        {% block product_detail %}{% endblock %}
     </div>
 {% endblock %}
 

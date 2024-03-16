@@ -1,5 +1,5 @@
 from django.contrib import admin
-from industry.models import UserInfo, Category
+from industry.models import UserInfo, Category, Product
 
 # Register your models here.
 
@@ -20,3 +20,10 @@ class CategoryManager(admin.ModelAdmin):
     list_editable = ['is_active']
     list_filter = ['category', 'is_active']
     list_per_page = 20
+
+
+@admin.register(Product)
+class ProductManager(admin.ModelAdmin):
+    list_display = ('id', 'name', 'category')
+    list_display_links = ['name']
+    list_filter = ['name', 'category']

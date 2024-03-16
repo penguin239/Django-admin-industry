@@ -154,7 +154,8 @@ SIMPLEUI_CONFIG = {
             'icon': 'fa-solid fa-bars',
             'models': [
                 {
-                    'name': '产品列表'
+                    'name': '产品列表',
+                    'url': 'industry/product/'
                 },
                 {
                     'name': '产品类别',

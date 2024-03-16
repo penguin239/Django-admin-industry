@@ -1,0 +1,13 @@
+.product-list {
+    display: none !important;
+}
+
+.product-detail-page {
+    flex: 8;
+    background-color: #1db393;
+}
+
+.top-back {
+    height: 140px !important;
+    overflow: hidden;
+}
