@@ -5,7 +5,51 @@
     <link rel="stylesheet" href="{% static 'front/css/product-detail.css' %}">
 
     <div class="product-detail-page">
-        {#        todo: 产品详细参数#}
+        <div class="product-detail-img">
+            <img src="{{ media_base_url }}{{ product.product_image }}" alt="">
+        </div>
+        <div class="product-detail-param">
+            <h3>{{ product.name }}</h3>
+            <div class="product-profile">
+                {{ product.profile }}
+            </div>
+            <hr style="width: 80%">
+            <span>
+                <b>所属分类：</b><a href="/products/?category={{ belong_category }}">{{ label_highlight }}</a>
+            </span>
+            <div class="product-consultation">
+                <b>业务咨询：</b>{{ site_settings.phone_number }}
+            </div>
+            <hr style="width: 80%">
+            <div class="product_options">
+                <button type="button" class="btn btn-primary">产品介绍</button>
+                <button type="button" class="btn btn-primary">详细参数</button>
+            </div>
+        </div>
+        <div class="product-more-detail">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#profile" class="nav-link active" data-bs-toggle="tab">产品介绍</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#param" class="nav-link" data-bs-toggle="tab">详细参数</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="profile">
+                    <p>{{ product.profile }}</p>
+                </div>
+                <div class="tab-pane fade" id="param">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 
+{% endblock %}
+
+{% block more_detail %}
+    <div class="container">
+        awfawf
+    </div>
 {% endblock %}

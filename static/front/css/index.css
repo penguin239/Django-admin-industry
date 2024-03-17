@@ -137,6 +137,9 @@ hr {
 }
 
 .product .product-detail {
+    color: inherit;
+    text-decoration: none;
+    display: block;
     cursor: pointer;
     position: relative;
     width: 90%;
@@ -145,6 +148,7 @@ hr {
     background-color: rgba(255, 255, 255, .8);
     border: 1px solid #ccc;
     transition: all .3s ease;
+    border-radius: 4px;
 }
 
 .product .row .col-md-3 {
@@ -154,7 +158,7 @@ hr {
 .product .product-detail img {
     width: 100%;
     height: 90%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .product .product-detail:hover {
@@ -228,6 +232,12 @@ hr {
     line-height: 2;
 }
 
+@media (max-width: 768px) {
+    .about-us .container .company-desc {
+        width: 100%
+    }
+}
+
 .about-us .read-more a {
     text-decoration: none;
     color: #fff;
@@ -242,7 +252,7 @@ hr {
 }
 
 .about-us .read-more a:hover {
-    background-color: rgb(235,153,23);
+    background-color: rgb(235, 153, 23);
 }
 
 .news {

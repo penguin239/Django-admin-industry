@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from industry.models import Category, Product
+from django_simple import settings
 from urllib import parse
 
 import base64
@@ -11,9 +12,21 @@ def url_decode(keyword):
     return parse.unquote(decode_base64_keyword)
 
 
+def url_encode(keyword):
+    unquote_keyword = parse.quote(keyword)
+
+    return base64.b64encode(unquote_keyword.encode()).decode('utf-8')
+
+
 def index(request):
+    all_product = Product.objects.all()
+
     return render(
-        request, 'index.html'
+        request, 'index.html',
+        {
+            'show_product': all_product[:8],
+            'media_base_url': settings.MEDIA_URL
+        }
     )
 
 
@@ -52,7 +65,8 @@ def products(request, is_extend=False):
         'site_location': f'产品首页 > {category}',
         'all_categories': all_categories,
         'result_product_list': result_product_list,
-        'label_highlight': category
+        'label_highlight': category,
+        'media_base_url': settings.MEDIA_URL,
     }
 
     if is_extend:
@@ -83,6 +97,10 @@ def productDetail(request):
     context = products(request, True)
     context['site_location'] += f' > {product.name}'
     context['label_highlight'] = category.category
+    context['product'] = product
+    context['belong_category'] = url_encode(category.category)
+
+    del context['result_product_list']
 
     return render(
         request, 'product-detail.html', context

@@ -41,7 +41,9 @@
             {% for product in result_product_list %}
                 <div class="loop-item">
                     <a class="product-detail" href="/product-detail?product-id={{ product.id }}">
-                        <img src="" alt="">
+                        <div class="product-img-box">
+                            <img src="{{ media_base_url }}{{ product.product_image }}" alt="">
+                        </div>
                         <div class="product-name">{{ product.name }}</div>
                     </a>
                 </div>
@@ -49,6 +51,7 @@
         </div>
         {% block product_detail %}{% endblock %}
     </div>
+    {% block more_detail %}{% endblock %}
 {% endblock %}
 
 {% block script %}

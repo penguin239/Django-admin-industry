@@ -30,6 +30,7 @@ urlpatterns = [
 
     # static
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 
     # api
     path('api/ServerSituation', api.ServerSituation, name='ServerSituation'),

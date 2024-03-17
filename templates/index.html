@@ -26,54 +26,14 @@
                 我们的产品生产高效且加工精准，具有稳定的运行性能和出色的耐用性。不论是汽车制造、电子设备生产还是其他行业，我们的设备都能够广泛应用，满足客户多样化的需求。
             </div>
             <div class="row">
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
+                {% for product in show_product %}
+                    <div class="col-md-3">
+                        <a class="product-detail" href="/product-detail/?product-id={{ product.id }}">
+                            <img src="{{ media_base_url }}{{ product.product_image }}" alt="">
+                            <div class="product-name">{{ product.name }}</div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-detail">
-                        <img src="" alt="">
-                        <div class="product-name">xxxx机器</div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

@@ -108,6 +108,7 @@
     text-decoration: none;
     color: inherit;
     border-radius: 8px;
+    text-align: center;
 }
 
 .product-detail .product-name {
@@ -119,4 +120,11 @@
     .loop-item {
         flex: 0 0 50%;
     }
+}
+
+.loop-item .product-detail img {
+    padding-top: 20px;
+    width: 80%;
+    height: 360px;
+    object-fit: contain;
 }

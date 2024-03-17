@@ -21,5 +21,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=64, verbose_name='机械名称')
+    profile = models.TextField(verbose_name='产品介绍', blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='类别')
+    product_image = models.ImageField(verbose_name='产品图片', default=0)
     # todo: 为产品详细信息设计表
