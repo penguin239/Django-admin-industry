@@ -1,3 +1,7 @@
+:target {
+    scroll-margin-top: 204px !important;
+}
+
 .product-list {
     display: none !important;
 }
@@ -6,11 +10,6 @@
     flex: 8;
     display: flex;
     flex-wrap: wrap;
-}
-
-.top-back {
-    height: 140px !important;
-    overflow: hidden;
 }
 
 .product-detail-img {
@@ -37,7 +36,7 @@
     color: inherit;
 }
 
-.product-detail-param a:hover {
+.product-detail-param span a:hover {
     text-decoration: underline;
 }
 
@@ -60,7 +59,9 @@
     margin-top: 10px;
 }
 
-.product_options button {
+.product_options a {
+    color: #fff;
+    display: inline-block;
     margin-bottom: 3px;
 }
 
@@ -85,4 +86,8 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.product-more-detail .nav-item a {
+    color: inherit;
 }

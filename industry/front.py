@@ -100,6 +100,8 @@ def productDetail(request):
     context['product'] = product
     context['belong_category'] = url_encode(category.category)
 
+    context['param_img'] = settings.MEDIA_URL + str(product.param_image)
+
     del context['result_product_list']
 
     return render(

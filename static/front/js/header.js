@@ -1,5 +1,6 @@
 let wrapper = $('.wrapper');
-let nav_link = $('.nav-link')
+let nav_link = $('.wrapper .nav-link')
+
 let scrollFunc = function (e) {
     let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     if (scrollTop === 0) {
