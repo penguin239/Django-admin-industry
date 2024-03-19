@@ -34,6 +34,7 @@ urlpatterns = [
 
     # api
     path('api/ServerSituation', api.ServerSituation, name='ServerSituation'),
+    path('api/TopNProducts', api.TopNProducts, name='topNProducts'),
 
     # front
     path('', front.index, name='index'),

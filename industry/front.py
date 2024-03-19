@@ -89,7 +89,6 @@ def contactUs(request):
 def productDetail(request):
     product_id = request.GET.get('product-id', None)
     if not product_id:
-        # todo: 重定向到错误页面
         pass
     product = Product.objects.filter(id=product_id).first()
     category = Category.objects.filter(id=product.category_id).first()

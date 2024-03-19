@@ -32,6 +32,18 @@
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .top-back {
+        margin-top: 84px;
+    }
+    .top-back .top-back-font p {
+        font-size: 26px;
+    }
+    .top-back .top-back-font .site-location {
+        font-size: 12px;
+    }
+}
+
 .isolation {
     user-select: none;
     width: 100%;

@@ -40,16 +40,20 @@
                     <p>{{ product.profile }}</p>
                 </div>
                 <div class="tab-pane fade" id="param">
-                    <img src="{{ param_img }}" alt="">
+                    <div class="alert alert-primary user-select-none">图片点击可放大</div>
+                    <img src="{{ param_img }}" id="paramImg" alt="">
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}
 
 {% block more_detail %}
     <div class="container">
         awfawf
     </div>
+{% endblock %}
+
+{% block children_script %}
+    <script src="{% static 'front/js/about-us.js' %}"></script>
 {% endblock %}

@@ -121,6 +121,7 @@ footer {
     .footer-right {
         padding: 3rem 0 0 0;
         text-align: center;
+        flex: none;
     }
     .footer-flex-box {
         justify-content: center;

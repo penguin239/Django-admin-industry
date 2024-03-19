@@ -18,6 +18,12 @@
     flex: 1;
 }
 
+@media (max-width: 768px) {
+    .about-images {
+        display: none;
+    }
+}
+
 .about-title h1 {
     font-weight: bold;
     font-size: 44px;
@@ -41,6 +47,12 @@
     word-break: break-all;
     color: rgb(70, 70, 70);
     line-height: 2;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        flex: 1;
+    }
 }
 
 .about-con-text p {

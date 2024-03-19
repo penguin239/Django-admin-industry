@@ -23,4 +23,3 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='类别')
     product_image = models.ImageField(verbose_name='产品图片', default=0)
     param_image = models.ImageField(verbose_name='参数图片', default=0, upload_to='param_img/')
-    # todo: 为产品详细信息设计表

@@ -1,6 +1,16 @@
 let wrapper = $('.wrapper');
 let nav_link = $('.wrapper .nav-link')
 
+if (screen.width <= 768) {
+    if (location.pathname === '/') {
+        $('#logo-view').attr('src', '/static/front/imgs/logo-light.png');
+    } else {
+        $('#logo-view').attr('src', '/static/front/imgs/logo-dark.png');
+    }
+}
+
+$.ajax('')
+
 let scrollFunc = function (e) {
     let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     if (scrollTop === 0) {
@@ -12,7 +22,15 @@ let scrollFunc = function (e) {
         $('.contact-us')[0].style.color = '#fff';
         $('.phone-num')[0].style.color = '#fff';
         $('._phone-icon')[0].style.fill = '#fff';
-        $('#logo-view').attr('src', '/static/front/imgs/logo-light.png');
+        if (screen.width <= 768) {
+            if (location.pathname === '/') {
+                $('#logo-view').attr('src', '/static/front/imgs/logo-light.png');
+            } else {
+                $('#logo-view').attr('src', '/static/front/imgs/logo-dark.png');
+            }
+        } else {
+            $('#logo-view').attr('src', '/static/front/imgs/logo-light.png');
+        }
     } else {
         wrapper[0].style.backgroundColor = 'rgb(255, 255, 255)';
         wrapper[0].style.boxShadow = '0 0 15px rgb(0 0 0 / 20%)';
