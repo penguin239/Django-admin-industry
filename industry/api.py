@@ -1,7 +1,9 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.http.response import JsonResponse
 from industry.models import Product
-
 from utils.redis_pool import POOL
+
+import redis
 
 
 def ServerSituation(request):
@@ -28,3 +30,23 @@ def TopNProducts(request):
             'products': data
         }
     )
+
+
+@staff_member_required
+def set_site_setting(request):
+    if request.method == 'POST':
+        conn = redis.StrictRedis(connection_pool=POOL)
+        phone = request.POST.get('site-phone')
+        title = request.POST.get('site-title')
+        site_email = request.POST.get('site-email')
+        company_address = request.POST.get('company-address')
+
+        conn.mset({
+            'phone_number': phone,
+            'site_title': title,
+            'mail': site_email,
+            'company_address': company_address
+        })
+
+        return JsonResponse({'status_code': 200})
+    return JsonResponse({'status_code': 500})

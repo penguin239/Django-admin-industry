@@ -150,7 +150,7 @@ SIMPLEUI_CONFIG = {
         {
             'name': '站点管理',
             'icon': 'fa-solid fa-star',
-            'url': '/admin/site-manage/'
+            'url': '/site-manage/'
         },
         {
             'app': 'industry',

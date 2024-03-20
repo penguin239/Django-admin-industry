@@ -18,23 +18,22 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.conf import settings
 from django.views.static import serve
-from industry import views, front, admin_site
+from industry import views, front
 from industry import api
-from industry.admin_site import custom_admin_site
 
 urlpatterns = [
     # admin
-    path('admin/site-manage/', custom_admin_site.site_manage, name='site-manage'),
-    path('admin/category/', custom_admin_site.category, name='category'),
     path('admin/', admin.site.urls),
+    path('site-manage/', views.site_manage, name='site-manage'),
 
     # static
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 
     # api
-    path('api/ServerSituation', api.ServerSituation, name='ServerSituation'),
-    path('api/TopNProducts', api.TopNProducts, name='topNProducts'),
+    path('api/ServerSituation/', api.ServerSituation, name='ServerSituation'),
+    path('api/TopNProducts/', api.TopNProducts, name='topNProducts'),
+    path('api/set-setting/', api.set_site_setting, name='set-setting'),
 
     # front
     path('', front.index, name='index'),

@@ -1,0 +1,29 @@
+.box-style {
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #EBEEF5;
+    color: #303133;
+    transition: .3s;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+
+.site-setting {
+    padding-bottom: 36px !important;
+}
+
+.content-body {
+    padding: 15px;
+}
+
+.content-header {
+    font-size: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #EBEEF5;
+    box-sizing: border-box;
+}
+
+#siteSetting {
+    font-size: 14px;
+}
