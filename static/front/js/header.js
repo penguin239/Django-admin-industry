@@ -9,7 +9,17 @@ if (screen.width <= 768) {
     }
 }
 
-$.ajax('')
+$.ajax({
+    url: '/api/TopNProducts',
+    type: 'GET',
+
+    success: (result) => {
+        let products = result.products;
+        for (let i = 0; i < products.length; i++) {
+            $('.footer-products').append(`<a href="/product-detail/?product-id=${products[i].id}" class="f2-list-a">${products[i].name}</a>`)
+        }
+    }
+});
 
 let scrollFunc = function (e) {
     let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;

@@ -24,6 +24,7 @@
             <div class="product_options">
                 <a href="#profile" class="btn btn-primary">产品介绍</a>
                 <a href="#profile" class="btn btn-primary">详细参数</a>
+                <a href="#online-guidance" class="btn btn-primary">在线咨询</a>
             </div>
         </div>
         <div class="product-more-detail">
@@ -49,11 +50,70 @@
 {% endblock %}
 
 {% block more_detail %}
-    <div class="container">
-        awfawf
+    <div class="container mt-5 mb-5">
+        <h4>在线咨询</h4>
+        <hr>
+        <div class="online-guidance" id="online-guidance">
+            <div class="guidance-box">
+                <div class="phone-guidance">
+                    <div class="phone-guidance-content">
+                        <svg t="1663816830414" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" p-id="2548" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M944.626667 731.686667a149.82 149.82 0 0 0-31.713334-66.313334L758.766667 480.4A148.926667 148.926667 0 0 0 644.046667 426.666667H379.953333a148.926667 148.926667 0 0 0-114.72 53.733333L111.086667 665.373333a149.82 149.82 0 0 0-31.713334 66.313334L58.393333 836.6A85.333333 85.333333 0 0 0 142.066667 938.666667h739.866666a85.333333 85.333333 0 0 0 83.673334-102.066667zM512 725.333333c-94.253333 0-170.666667-47.753333-170.666667-106.666666s76.413333-106.666667 170.666667-106.666667 170.666667 47.753333 170.666667 106.666667-76.413333 106.666667-170.666667 106.666666z m469.333333-405.333333v53.333333a53.393333 53.393333 0 0 1-53.333333 53.333334h-192a53.393333 53.393333 0 0 1-53.333333-53.333334v-53.333333c0-13.253333-16.666667-28.9-43.566667-40.846667C605.506667 264.22 560.366667 256 512 256s-93.506667 8.22-127.1 23.153333C358 291.1 341.333333 306.746667 341.333333 320v53.333333a53.393333 53.393333 0 0 1-53.333333 53.333334H96a53.393333 53.393333 0 0 1-53.333333-53.333334v-53.333333c0-65.666667 50.92-126.08 143.38-170.113333C273.466667 108.26 389.226667 85.333333 512 85.333333s238.533333 22.926667 325.953333 64.553334C930.413333 193.92 981.333333 254.333333 981.333333 320z"
+                                  p-id="2549"></path>
+                        </svg>
+                        <h6 class="fw-bold">联系我们</h6>
+                        <hr>
+                        <p>手机：{{ site_settings.phone_number }}</p>
+                        <hr>
+                        <p>邮箱：{{ site_settings.mail }}</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="table-guidance">
+                    <div class="table-guidance-content">
+                        <h6 class="fw-bold">快速获取技术支持和详细报价</h6>
+                        <p class="mt-3">
+                            欢迎您填写以下表格，填写您的产品要求、联系方式等信息，我们将迅速反馈您的购买咨询。<br>
+                            您也可以通过拨打左侧电话、电子邮件与我们联系，我们的客户服务团队将进一步为您提供优质服务。</p>
+                    </div>
+                    <form role="form" class="mt-4" id="leaveMessage">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="form-control" placeholder="姓名" name="name" required>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="email" class="form-control" placeholder="邮箱" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input class="form-control" type="tel" placeholder="手机号" name="phone" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea name="message" class="form-control" rows="4" placeholder="咨询内容"
+                                      required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary float-end">立即提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">提示</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                您的留言咨询已提交！
+            </div>
+        </div>
     </div>
 {% endblock %}
 
 {% block children_script %}
-    <script src="{% static 'front/js/about-us.js' %}"></script>
+    <script src="{% static 'front/js/product-detail.js' %}"></script>
 {% endblock %}

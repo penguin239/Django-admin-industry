@@ -1,9 +1,18 @@
-from django.shortcuts import render, HttpResponse
-from industry.models import Category, Product
+from django.http import JsonResponse
+from django.shortcuts import render
+from industry.models import Category, Product, LeaveMessage
 from django_simple import settings
 from urllib import parse
 
+import requests
 import base64
+
+
+def __get_location(ip_addr):
+    response = requests.get(f'https://whois.pconline.com.cn/ipJson.jsp?ip={ip_addr}&json=true', timeout=3)
+    if response.status_code == 200:
+        return response.json().get('addr', 'Unknown')
+    return 'Unknown'
 
 
 def url_decode(keyword):
@@ -106,3 +115,20 @@ def productDetail(request):
     return render(
         request, 'product-detail.html', context
     )
+
+
+def leaveMessage(request):
+    name = request.POST.get('name', None)
+    email = request.POST.get('email', None)
+    phone = request.POST.get('phone', None)
+    ip_addr = request.META.get('REMOTE_ADDR', None)
+    user_location = __get_location(ip_addr)
+    message = request.POST.get('message', None)
+
+    save_leaveMsg = LeaveMessage.objects.create(
+        name=name, email=email, phone=phone,
+        ipAddr=ip_addr, place=user_location, message=message
+    )
+    save_leaveMsg.save()
+
+    return JsonResponse({'status_code': 200})

@@ -169,21 +169,9 @@ SIMPLEUI_CONFIG = {
         },
         {
             'app': 'industry',
-            'name': '数据库管理',
+            'name': '留言管理',
             'icon': 'fa fa-th-list',
-            # 'url': 'industry/userinfo', # 直接显示
-            'models': [
-                {
-                    'name': '员工数据库',
-                    'url': 'industry/userinfo/',
-                    'icon': 'fa fa-user'
-                },
-                {
-                    'name': '货物数据库',
-                    'url': 'industry/userinfo/',
-                    'icon': 'fa-solid fa-cart-shopping'
-                }
-            ]
+            'url': 'industry/leavemessage',
         },
         {
             'app': 'auth',
