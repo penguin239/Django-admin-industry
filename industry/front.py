@@ -3,9 +3,11 @@ from django.shortcuts import render
 from industry.models import Category, Product, LeaveMessage
 from django_simple import settings
 from urllib import parse
+from utils.redis_pool import POOL
 
 import requests
 import base64
+import redis
 
 
 def __get_location(ip_addr):
@@ -29,12 +31,19 @@ def url_encode(keyword):
 
 def index(request):
     all_product = Product.objects.all()
+    conn = redis.StrictRedis(connection_pool=POOL)
+
+    back_data = {
+        'slogan1': conn.hget('HOME_PAGE:slogan:1', 'slogan'),
+        'slogan2': conn.hget('HOME_PAGE:slogan:2', 'slogan')
+    }
 
     return render(
         request, 'index.html',
         {
             'show_product': all_product[:8],
-            'media_base_url': settings.MEDIA_URL
+            'media_base_url': settings.MEDIA_URL,
+            'back_data': back_data
         }
     )
 

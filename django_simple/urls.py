@@ -34,6 +34,7 @@ urlpatterns = [
     path('api/ServerSituation/', api.ServerSituation, name='ServerSituation'),
     path('api/TopNProducts/', api.TopNProducts, name='topNProducts'),
     path('api/set-setting/', api.set_site_setting, name='set-setting'),
+    path('api/set-slogan/', api.set_slogan, name='set-slogan'),
 
     # front
     path('', front.index, name='index'),

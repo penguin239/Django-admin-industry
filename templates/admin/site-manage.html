@@ -6,12 +6,27 @@
 {% endblock %}
 
 {% block content %}
+    <div class="slogan-manage box-style">
+        <div class="content-header">
+            <span>首页标语设置</span>
+        </div>
+        <div class="content-body">
+            <form role="form" class="mt-2" id="slogan-manage">
+                {% csrf_token %}
+                <label for="slogan1">标语一：</label>
+                <input type="text" class="form-control mb-3" value="{{ slogan1 }}" id="slogan1" name="slogan1">
+                <label for="slogan2">标语二：</label>
+                <input type="text" class="form-control mb-3" value="{{ slogan2 }}" id="slogan2" name="slogan2">
+                <button type="submit" class="btn btn-primary float-end">提交修改</button>
+            </form>
+        </div>
+    </div>
     <div class="site-manage-main box-style">
         <div class="content-header">
             <span>首页联系方式设置</span>
         </div>
         <div class="site-setting content-body">
-            <form role="form" class="mt-4" id="siteSetting">
+            <form role="form" class="mt-2" id="siteSetting">
                 {% csrf_token %}
                 <div class="row">
                     <div class="col-lg-6 mb-3">
@@ -39,14 +54,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary float-end">提交修改</button>
             </form>
-        </div>
-    </div>
-    <div class="box-style">
-        <div class="content-header">
-            <span>xx设置</span>
-        </div>
-        <div class="content-body">
-            0000
         </div>
     </div>
     <div class="position-fixed bottom-0 end-0 p-3">

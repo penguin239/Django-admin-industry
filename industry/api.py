@@ -50,3 +50,18 @@ def set_site_setting(request):
 
         return JsonResponse({'status_code': 200})
     return JsonResponse({'status_code': 500})
+
+
+@staff_member_required
+def set_slogan(request):
+    print(request.POST)
+    slogan1 = request.POST.get('slogan1', None)
+    slogan2 = request.POST.get('slogan2', None)
+
+    if slogan1 and slogan2:
+        conn = redis.StrictRedis(connection_pool=POOL)
+        conn.hset('HOME_PAGE:slogan:1', 'slogan', slogan1)
+        conn.hset('HOME_PAGE:slogan:2', 'slogan', slogan2)
+
+        return JsonResponse({'status_code': 200})
+    return JsonResponse({'status_code': 500})
