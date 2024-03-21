@@ -35,7 +35,8 @@ def index(request):
 
     back_data = {
         'slogan1': conn.hget('HOME_PAGE:slogan:1', 'slogan'),
-        'slogan2': conn.hget('HOME_PAGE:slogan:2', 'slogan')
+        'slogan2': conn.hget('HOME_PAGE:slogan:2', 'slogan'),
+        'intro': conn.get('intro')
     }
 
     return render(
