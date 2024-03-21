@@ -60,7 +60,7 @@ def aboutUs(request):
 
 
 def products(request, is_extend=False):
-    request.prefix = '产品首页-'
+    request.prefix = '产品中心-'
 
     keyword = request.GET.get('category', None)
     result_product_list = []
@@ -81,7 +81,7 @@ def products(request, is_extend=False):
 
     context = {
         'page_title': 'Products Center',
-        'site_location': f'产品首页 > {category}',
+        'site_location': f'产品中心 > {category}',
         'all_categories': all_categories,
         'result_product_list': result_product_list,
         'label_highlight': category,
@@ -93,15 +93,14 @@ def products(request, is_extend=False):
     return render(request, 'products.html', context)
 
 
-def news(request):
-    return render(
-        request, 'news.html'
-    )
-
-
 def contactUs(request):
+    request.prefix = '联系我们-'
     return render(
-        request, 'contact-us.html'
+        request, 'contact-us.html',
+        {
+            'page_title': 'Contact Us',
+            'site_location': '联系我们'
+        }
     )
 
 

@@ -40,7 +40,6 @@ urlpatterns = [
     path('', front.index, name='index'),
     path('about-us/', front.aboutUs, name='aboutUs'),
     path('products/', front.products, name='products'),
-    path('news/', front.news, name='news'),
     path('contact-us/', front.contactUs, name='contact-us'),
     path('product-detail/', front.productDetail, name='product-detail'),
     path('leave-message/', front.leaveMessage, name='leave-message')

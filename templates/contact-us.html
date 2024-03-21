@@ -1,2 +1,23 @@
-{% extends 'header.html' %}
+{% extends 'isolation-utils.html' %}
 {% load static %}
+
+{% block children_css %}
+    <link rel="stylesheet" href="{% static 'front/css/contact-us.css' %}">
+{% endblock %}
+
+{% block below_isolation_content %}
+    <div class="contact-content">
+        <div class="con-top">
+            <h3>联系我们</h3>
+            <p>如对机器有任何疑问，欢迎来电咨询：{{ site_settings.phone_number }}，我们将竭诚为您解答！</p>
+        </div>
+        <hr>
+        <div class="con-mid">
+            <div class="con-mid-son"></div>
+            <div class="con-mid-son"></div>
+            <div class="con-mid-son"></div>
+            <div class="con-mid-son"></div>
+        </div>
+        <div class="con-end"></div>
+    </div>
+{% endblock %}

@@ -209,10 +209,10 @@ hr {
 
 .about-us {
     width: 100%;
-    padding: 10px;
     background-image: url("../imgs/wallhaven-8xyk52.jpg");
     background-size: cover;
     background-attachment: fixed;
+    padding: 10px 10px 60px;
 }
 
 .about-us .container {

@@ -1,0 +1,35 @@
+.contact-content {
+    padding: 60px 0;
+}
+
+.con-top {
+    text-align: center;
+}
+
+.con-top h3 {
+    color: #454545;
+    font-weight: bold;
+}
+
+.con-top p {
+    line-height: 2;
+    font-size: 14px;
+    color: #A9A9A9;
+}
+
+.con-mid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-mid-son:first-child {
+    margin-left: 0;
+}
+
+.con-mid-son {
+    margin-left: 10px;
+    flex: 1;
+    height: 30vh;
+    border: 1px solid rgb(220, 222, 224);
+    border-radius: 4px;
+}
