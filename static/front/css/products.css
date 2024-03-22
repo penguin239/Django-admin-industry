@@ -1,3 +1,7 @@
+.top-back {
+    background-image: url("../imgs/bg-products-center.jpg");
+}
+
 .reserve-container {
     max-width: 1500px;
 }

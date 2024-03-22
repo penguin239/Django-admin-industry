@@ -1,3 +1,7 @@
+.top-back {
+    background-image: url("../imgs/bg-contact-us.jpg") !important;
+}
+
 .contact-content {
     padding: 60px 0;
 }
@@ -27,9 +31,48 @@
 }
 
 .con-mid-son {
+    padding-top: 20px;
     margin-left: 10px;
     flex: 1;
-    height: 30vh;
     border: 1px solid rgb(220, 222, 224);
     border-radius: 4px;
+}
+
+.con-mid-son hr {
+    width: 90%;
+    margin: 0 auto;
+    border-color: #a9a9a9;
+}
+
+.con-mid-son-header {
+    text-align: center;
+}
+
+.con-mid-son-header svg {
+    width: 46px;
+    height: 66px;
+}
+
+.con-mid-son-header p {
+    font-weight: 600;
+}
+
+.con-mid-son-body {
+    padding: 0 10px;
+    text-align: center;
+}
+
+.con-mid-son-body p {
+    padding: 20px 0 30px 0;
+}
+
+.con-end {
+    margin-top: 4rem;
+}
+
+.map-container {
+    height: 600px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: crosshair !important;
 }
