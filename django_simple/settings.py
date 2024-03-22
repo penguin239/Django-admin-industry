@@ -138,10 +138,10 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SIMPLEUI_HOME_INFO = False
-SIMPLEUI_HOME_TITLE = '工业管理系统'
+SIMPLEUI_HOME_TITLE = '丰迪机械后台管理系统'
 SIMPLEUI_ANALYSIS = True
 # SIMPLEUI_HOME_QUICK = False
-SIMPLEUI_LOGO = 'http://42.193.96.127/static/images/default_avatar.png'
+SIMPLEUI_LOGO = '../static/front/imgs/logo-only.png'
 
 SIMPLEUI_CONFIG = {
     'system_keep': False,

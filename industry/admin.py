@@ -3,8 +3,8 @@ from industry.models import Category, Product, LeaveMessage
 
 # Register your models here.
 
-admin.site.site_header = '工业管理系统'
-admin.site.site_title = '后台管理系统'
+admin.site.site_header = '丰迪机械后台管理系统'
+admin.site.site_title = '丰迪机械后台管理系统'
 
 
 @admin.register(Category)

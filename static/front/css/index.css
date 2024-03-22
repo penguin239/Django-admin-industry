@@ -196,15 +196,21 @@ hr {
 .application-area .container .col-md-3 img {
     width: 100%;
     height: 30vh;
+    object-fit: cover;
 }
 
 .application-area .container .col-md-3 .app-name {
-    padding: 6px 0;
+    padding: 20px 0 10px 0;
     font-size: 18px;
+    text-align: center;
 }
 
 .application-area .container .col-md-3 .app-desc {
     padding-bottom: 10px;
+    color: rgb(70, 70, 70);
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 1px;
 }
 
 .about-us {
