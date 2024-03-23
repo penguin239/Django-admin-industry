@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'industry.apps.IndustryConfig'
+    'industry.apps.IndustryConfig',
+    'django_apscheduler'
 ]
 
 MIDDLEWARE = [

@@ -1,3 +1,5 @@
+import time
+
 from django.contrib.admin.views.decorators import staff_member_required
 from django.http.response import JsonResponse
 from industry.models import Product
@@ -67,3 +69,19 @@ def set_slogan(request):
 
         return JsonResponse({'status_code': 200})
     return JsonResponse({'status_code': 500})
+
+
+@staff_member_required
+def get_server_source(request):
+    # 获取redis中存的服务器资源，供前端可视化
+    conn = redis.StrictRedis(connection_pool=POOL)
+    result = conn.lrange('server_resource', 0, -1)
+
+    return JsonResponse(
+        {
+            'status_code': 200,
+            'total_time': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+            'simple_time': time.strftime("%H:%M", time.localtime()),
+            'server_resource': result
+        }
+    )
