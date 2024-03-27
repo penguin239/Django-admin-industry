@@ -160,11 +160,13 @@ SIMPLEUI_CONFIG = {
             'models': [
                 {
                     'name': '产品列表',
-                    'url': 'industry/product/'
+                    'url': 'industry/product/',
+                    'icon': 'fa-solid fa-list'
                 },
                 {
                     'name': '产品类别',
-                    'url': 'industry/category/'
+                    'url': 'industry/category/',
+                    'icon': 'fa-brands fa-dropbox'
                 }
             ]
         },

@@ -1,20 +1,9 @@
-import time
-
 from django.contrib.admin.views.decorators import staff_member_required
 from django.http.response import JsonResponse
 from industry.models import Product
 from utils.redis_pool import POOL
 
 import redis
-
-
-def ServerSituation(request):
-    return JsonResponse(
-        {
-            'status_code': 200,
-            'status': 'success'
-        }
-    )
 
 
 def TopNProducts(request):
@@ -80,8 +69,6 @@ def get_server_source(request):
     return JsonResponse(
         {
             'status_code': 200,
-            'total_time': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
-            'simple_time': time.strftime("%H:%M", time.localtime()),
             'server_resource': result
         }
     )

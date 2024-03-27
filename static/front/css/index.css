@@ -221,8 +221,9 @@ hr {
     padding: 10px 10px 60px;
 }
 
-.about-us .container {
+.about-us .mt6 {
     margin-top: 6rem;
+    display: flex;
 }
 
 .about-us .container .line {
@@ -233,15 +234,52 @@ hr {
 }
 
 .about-us .container .company-desc {
-    width: 50%;
     word-break: break-all;
     color: rgb(70, 70, 70);
     line-height: 2;
 }
 
+.about-us-left {
+    flex: 1;
+}
+
+.about-us-right {
+    flex: 0 0 46%;
+    padding-left: 6rem;
+}
+
+.about-us-right hr {
+    width: 80%;
+}
+
+.about-us-right .cell {
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.about-us-right .cell:last-child {
+    border: 0;
+}
+
+.about-us-right .cell svg {
+    width: 36px;
+    height: 36px;
+    margin-right: 20px;
+}
+
+.about-us .read-more {
+    margin-top: 5rem;
+}
+
 @media (max-width: 768px) {
     .about-us .container .company-desc {
         width: 100%
+    }
+    .about-us-right {
+        display: none;
     }
 }
 

@@ -9,7 +9,7 @@
 
 .source_panel {
     display: inline-block;
+    padding-top: 30px;
     width: 300px;
-    height: 300px;
-    border: 1px solid #ccc;
+    height: 180px;
 }
